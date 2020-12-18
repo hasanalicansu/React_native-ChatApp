@@ -1,0 +1,6 @@
+Bu bir mesajlaşma ve bildirim gönderme uygulamasıdır.
+
+Kullanıcı girişi olan bu uygulamada herkes kayıtlı kullanıcıların hepsi birbiriyle mesajlaşabilir.
+Aynı zamanda uygulama duvarında bildirim yayınlayabilir.
+
+Mobil uygulama geliştirme dersi Ödevidir React-native ve expo kullanılarak oluşturulacaktır.s
