@@ -53,12 +53,12 @@ export const RegisterUser = ({isim, soyisim, email, password}) => {
 //---------------------------------------------------------------------------------------------------------------------------------
 const loginSuccess = (dispatch, user) => {
   const {currentUser} = firebase.auth();
-  
+
   dispatch({
     type: LOGIN_USER_SUCCESS,
     payload: currentUser,
   });
-  RooterNavigation.navigate('Main', {currentUser});
+  RooterNavigation.navigate('HomeChat', {currentUser});
 };
 
 //---------------------------------------------------------------------------------------------------------------------------------
@@ -66,21 +66,19 @@ const loginSuccess = (dispatch, user) => {
 const RegisterSuccess = (dispatch, ad, soyad, user) => {
   const {currentUser} = firebase.auth();
   const Kid = currentUser.uid;
-  let isim=ad.toLowerCase();
-  let soyisim=soyad.toLowerCase();
-  firebase
-    .database()
-    .ref('/kullanicilar/'+isim+" "+soyisim)
-    .push({Kid, isim, soyisim});
-  var users = firebase.auth().currentUser
+  const users = firebase.auth().currentUser;
+  let isim = ad.toLowerCase();
+  let soyisim = soyad.toLowerCase();
+  firebase.database().ref('/kullanicilar/').push({Kid, isim, soyisim});
+
   users.updateProfile({
-    displayName: isim+" "+soyisim,
+    displayName: isim + ' ' + soyisim,
   });
   dispatch({
     type: LOGIN_USER_SUCCESS,
     payload: currentUser,
   });
-  RooterNavigation.navigate('Main', {currentUser});
+  RooterNavigation.navigate('HomeChat', {currentUser});
 };
 //---------------------------------------------------------------------------------------------------------------------------------
 

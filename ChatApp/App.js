@@ -5,6 +5,7 @@ import reducers from './src/redux/reducer';
 import ReduxThunk from 'redux-thunk';
 import firebase from 'firebase';
 import {Text, View} from 'react-native';
+import LoginPage from "./src/Components/LoginPage"
 import RooterComponent from './src/Rooter';
 
 
