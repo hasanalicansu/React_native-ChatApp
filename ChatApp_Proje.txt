@@ -1,4 +1,4 @@
-projeyi çalıştırmak için "npm install" ile dosyalar yüklenmeli sonra "expo start" ile çalıştırılmalı !!!!!!
+projeyi çalıştırmak için "npm install" ile node_modules dosyaları yüklenmeli sonra "expo start" ile çalıştırılmalıdır !!!!!!
 Bu bir mesajlaşma ve bildirim gönderme uygulamasıdır.
 
 Kullanıcı girişi olan bu uygulamada herkes kayıtlı kullanıcıların hepsi birbiriyle mesajlaşabilir.
